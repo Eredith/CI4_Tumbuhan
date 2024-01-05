@@ -123,6 +123,9 @@
                         <?php if (session()->getFlashdata('msg')) : ?>
                             <div class="alert alert-danger" id="disappearingDiv"><?= session()->getFlashdata('msg') ?></div>
                         <?php endif; ?>
+                        <?php if (session()->getFlashdata('pesanTumbuhan')) : ?>
+                            <div class="alert alert-success" id="disappearingDiv"><?= session()->getFlashdata('pesanTumbuhan') ?></div>
+                        <?php endif; ?>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">

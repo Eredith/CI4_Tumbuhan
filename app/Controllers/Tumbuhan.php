@@ -66,7 +66,7 @@ class Tumbuhan extends Controller
 
         // insert data into the database
         $this->tumbuhanModel->insert($data);
-        session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
+        session()->setFlashdata('pesanTumbuhan', 'Data Tumbuhan berhasil ditambahkan');
         return redirect()->to('/dashboard');
     }
 
