@@ -131,6 +131,12 @@
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
         </div>
+        <?php if (session()->getFlashdata('msg')) : ?>
+            <div class="alert alert-danger" id="disappearingDiv"><?= session()->getFlashdata('msg') ?></div>
+        <?php endif; ?>
+        <?php if (session()->getFlashdata('pesanTumbuhan')) : ?>
+            <div class="alert alert-success" id="disappearingDiv"><?= session()->getFlashdata('pesanTumbuhan') ?></div>
+        <?php endif; ?>
         <!-- /.content-header -->
 
         <!-- <body class="hold-transition sidebar-mini layout-fixed">

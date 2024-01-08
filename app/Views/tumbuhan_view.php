@@ -56,16 +56,13 @@
                                     <label for="jumlah_tumbuhan">Jumlah Tumbuhan</label>
                                     <input type="number" class="form-control" id="jumlah_tumbuhan" name="jumlah_tumbuhan" placeholder="Enter jumlah tumbuhan">
                                 </div>
-                                <div class="form-group">
-                                    <label for="foto_tumbuhan">Foto Tumbuhan</label>
-                                    <div class="input-group">
-                                        <div class="custom-file">
-                                            <input type="file" class="form-control" id="foto_tumbuhan" name="foto_tumbuhan">
-                                            <label class="custom-file-label" for="foto_tumbuhan">Choose file</label>
-                                        </div>
-                                        <div class="input-group-append">
-                                            <span class="input-group-text" id="">Upload</span>
-                                        </div>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="form-control" id="foto_tumbuhan" name="foto_tumbuhan">
+                                        <label class="custom-file-label" for="foto_tumbuhan" id="fileLabel">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="">Upload</span>
                                     </div>
                                 </div>
                             </div>
@@ -82,13 +79,3 @@
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-
-
-    <base href="<?php echo base_url('assets') ?>/">
-    <!-- bs-custom-file-input -->
-    <script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            bsCustomFileInput.init();
-        });
-    </script>

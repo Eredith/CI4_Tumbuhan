@@ -17,5 +17,5 @@ $routes->post('/save', 'Register::save');
 $routes->get('/tumbuhan', 'Tumbuhan::index');
 $routes->post('/insert', 'Tumbuhan::insertData');
 $routes->get('/admin/dashboard', 'AdminPage::index');
-// Add the following line for the tumbuhan delete route
 $routes->get('/admin/delete/(:num)', 'Tumbuhan::deleteTumbuhan/$1');
+$routes->get('pdf/show', 'Panduan::showPdf');

@@ -53,6 +53,22 @@
       <!-- AdminLTE App -->
       <script src="dist/js/adminlte.js"></script>
       <!-- page script -->
+      <!-- bs-custom-file-input -->
+      <script src="plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+      <script type="text/javascript">
+          $(document).ready(function() {
+              bsCustomFileInput.init();
+
+              // Update file label text on file input change
+              $('#foto_tumbuhan').on('change', function() {
+                  // Get the file name
+                  var fileName = $(this).val().split('\\').pop();
+
+                  // Update the label text
+                  $('#fileLabel').text(fileName);
+              });
+          });
+      </script>
       <script>
           $(function() {
               $("#example1").DataTable({

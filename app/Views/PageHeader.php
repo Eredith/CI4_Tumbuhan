@@ -43,11 +43,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+                <div class="collapse navbar-collapse order-3 d-flex" id="navbarCollapse">
                     <!-- Left navbar links -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a href="/dashboard" class="nav-link">Home</a>
+                            <?php if (session()->get('logged_in')) : ?>
+                                <a href="<?= site_url('pdf/show') ?>" target="_blank">Panduan</a>
+
+                            <?php endif; ?>
                         </li>
                         <!-- End Level two -->
                     </ul>

@@ -64,10 +64,17 @@ class Tumbuhan extends Controller
             return redirect()->back()->withInput()->with('validation', $validation);
         }
 
-        // insert data into the database
-        $this->tumbuhanModel->insert($data);
-        session()->setFlashdata('pesanTumbuhan', 'Data Tumbuhan berhasil ditambahkan');
-        return redirect()->to('/dashboard');
+        // Check if the user is an admin based on the session variable
+        if (session()->get('is_admin')) {
+            $this->tumbuhanModel->insert($data);
+            session()->setFlashdata('pesanTumbuhan', 'Data Tumbuhan berhasil ditambahkan');
+            return redirect()->to('/admin/dashboard');
+        } else {
+            // Redirect to the regular user dashboard
+            $this->tumbuhanModel->insert($data);
+            session()->setFlashdata('pesanTumbuhan', 'Data Tumbuhan berhasil ditambahkan');
+            return redirect()->to('/dashboard');
+        }
     }
 
     public function deleteTumbuhan($id)
